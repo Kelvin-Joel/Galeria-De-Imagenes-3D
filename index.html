@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box">
+        <div class="lado">
+          <img
+            src="https://img.freepik.com/foto-gratis/mujer-bonita-joven-feliz-emocionada_171337-2005.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+            alt=""
+          />
+        </div>
+        <div class="lado">
+          <img
+            src="https://img.freepik.com/foto-gratis/retrato-joven-excitada-telefono-movil_171337-1648.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+            alt=""
+          />
+        </div>
+        <div class="lado">
+          <img
+            src="https://img.freepik.com/foto-gratis/retrato-chica-guapa-vestida-negro-vestido-gritando_171337-3879.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+            alt=""
+          />
+        </div>
+        <div class="lado">
+          <img
+            src="https://img.freepik.com/foto-gratis/colorido-retrato-hermosa-mujer-rubia-estilo-maquillaje-brillante-pelos-esponjosos-ropa-casual-gafas-sol-tipo-mochila-colores-primavera-pastel-estudio-moda-glamour_291049-1804.jpg?size=338&ext=jpg&ga=GA1.2.1506558316.1602735123"
+            alt=""
+          />
+        </div>
+        <div class="lado">
+          <img
+            src="https://img.freepik.com/foto-gratis/tres-mujeres-hermosas-sonrientes-ropa-verano-camisa-cuadros-chicas-posando-modelos-globo-forma-corazon-gafas-sol-listo-celebracion-san-valentin_158538-4621.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+            alt=""
+          />
+        </div>
+        <div class="lado">
+          <img
+            src="https://img.freepik.com/foto-gratis/vista-frontal-mujer-joven-camisa-blanca-posando-escuchando-musica-pared-rosa-modelo-mujer-color_140725-33423.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="galeria" id="galeria">
+      <div class="img">
+        <img
+          class="img1"
+          src="https://img.freepik.com/foto-gratis/mujer-bonita-joven-feliz-emocionada_171337-2005.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+          alt=""
+        />
+      </div>
+      <div class="img">
+        <img
+          class="img2"
+          src="https://img.freepik.com/foto-gratis/retrato-joven-excitada-telefono-movil_171337-1648.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+          alt=""
+        />
+      </div>
+      <div class="img">
+        <img
+          class="img3"
+          src="https://img.freepik.com/foto-gratis/retrato-chica-guapa-vestida-negro-vestido-gritando_171337-3879.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+          alt=""
+        />
+      </div>
+      <div class="img">
+        <img
+          class="img4"
+          src="https://img.freepik.com/foto-gratis/colorido-retrato-hermosa-mujer-rubia-estilo-maquillaje-brillante-pelos-esponjosos-ropa-casual-gafas-sol-tipo-mochila-colores-primavera-pastel-estudio-moda-glamour_291049-1804.jpg?size=338&ext=jpg&ga=GA1.2.1506558316.1602735123"
+          alt=""
+        />
+      </div>
+      <div class="img">
+        <img
+          class="img5"
+          src="https://img.freepik.com/foto-gratis/tres-mujeres-hermosas-sonrientes-ropa-verano-camisa-cuadros-chicas-posando-modelos-globo-forma-corazon-gafas-sol-listo-celebracion-san-valentin_158538-4621.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+          alt=""
+        />
+      </div>
+      <div class="img">
+        <img
+          class="img6"
+          src="https://img.freepik.com/foto-gratis/vista-frontal-mujer-joven-camisa-blanca-posando-escuchando-musica-pared-rosa-modelo-mujer-color_140725-33423.jpg?size=626&ext=jpg&ga=GA1.2.1506558316.1602735123"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <script>
+      let box = document.getElementById("box");
+      let galeria = document.getElementById("galeria");
+
+      galeria.addEventListener("click", (e) => {
+        let dato = e.target.className;
+
+        switch (dato) {
+          case "img1":
+            box.style.transform = "rotateY(0deg)";
+            break;
+          case "img2":
+            box.style.transform = "rotateY(-90deg)";
+            break;
+          case "img3":
+            box.style.transform = "rotateY(90deg)";
+            break;
+          case "img4":
+            box.style.transform = "rotateY(180deg)";
+            break;
+          case "img5":
+            box.style.transform = "rotateX(-90deg)";
+            break;
+          case "img6":
+            box.style.transform = "rotateX(90deg)";
+            break;
+          default:
+            console.log("Galeria Con Efecto 3D :S ");
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
